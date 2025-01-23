@@ -27,6 +27,7 @@
 \usepackage{listings}
 
 % Custom packages
+\usepackage{multicol}
 \usepackage{svg}
 \setsvg{inkscape = "inkscape" -z -D}
 
@@ -54,7 +55,7 @@
 %% Opacidad de los logotipos
 \newcommand{\opacidad}{1}
 %% Descomentar para habilitar logotipo en pié de página de portada
-\renewcommand{\logoUno}{Images/isg.png}
+%\renewcommand{\logoUno}{Images/isg.png}
 %% Descomentar para habilitar logotipo en pié de página de portada
 %\renewcommand{\logoDos}{Images/CCLogo.png}
 %% Descomentar para habilitar logotipo en pié de página de portada
@@ -87,21 +88,6 @@
     \end{frame}
 }
 
-\begin{frame}[plain]{}
-   \begin{block}{Objectives}
-      \begin{enumerate}
-         \item Understand the need of version control
-         \item Implement software development workflows with Git and Github
-      \end{enumerate}
-   \end{block}
-
-   \begin{block}{Bibliography}
-      \begin{enumerate}
-          \item GitHub Guides. \href{https://guides.github.com/}{(Link)}
-      \end{enumerate} 
-   \end{block}
-\end{frame}
-
 {
 \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
@@ -112,9 +98,29 @@
 }
 
 
-\section{Version control}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Version control}
+\subsection{Motivation}
+
+
+\begin{frame}[plain]%{Version control}{Motivation}
+
+\begin{center}
+\begin{columns}
+	\column{.450\linewidth}
+    \includegraphics[width=\linewidth]{figs/motivation.png}\\
+    \center \tiny \href{https://xkcd.com/1459/}{(Source)}
+	\column{.050\linewidth}
+	\column{.450\linewidth}
+    \includegraphics[width=\linewidth]{figs/vcs-motivation.png}\\
+    \center \tiny \href{http://www.phdcomics.com/}{(Source)}
+\end{columns}
+\end{center}
+
+\end{frame}
+
+
+
 
 \begin{frame}{Version control}
 
@@ -155,7 +161,7 @@ Git is an open source distributed version control system, created by Linus Torva
 
 \url{https://git-scm.com/}
 \\
-\href{https://try.github.io/levels/1/challenges/1}{(Interactive tutorial)}
+\href{https://learngitbranching.js.org/}{(Interactive tutorial)}
 
 
 \column{.30\textwidth}
@@ -454,23 +460,36 @@ The second person will have to pull and merge before pushing.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Commits}
-\begin{frame}{Using Git}{Commits}
+\begin{frame}[fragile]{Using Git}{Commits}
 
+Each commit has ...
 \begin{itemize}
-% \item Merge commits record where parallel development unified
-% \item How does Git keep track of things when parallel development
+    \item ... an author
+    \item ... a comment: "Fix deprecated py36 black option"
+    \item ... a date
+    % \item Merge commits record where parallel development unified
+    % \item How does Git keep track of things when parallel development
 %happens?
-\item Every commit has an ID (its hash)
-%	, which is a 40 character SHA-1
-%hash based on the commit's content. Not guaranteed to be
-%unique; but it probably is
+    \item ... an ID (or \textit{hash})
+    %	, which is a 40 character SHA-1
+    %hash based on the commit's content. Not guaranteed to be
+    %unique; but it probably is
+
 \end{itemize}
+
+\begin{verbatim}
+commit 44161dde6ea234f8cb997644f8e187123c3cc4af
+Author: David <foo@foo.com>
+Date:   Fri Mar 9 14:57:32 2018 +0100
+
+    Issue with syntax highlighting solved
+\end{verbatim}
 
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Branches}
-\begin{frame}{Using Git}{Branches}
+\begin{frame}{Using Git}{Branches (I)}
 
 \centering \includegraphics[width=.8\textwidth]{figs/branching}
 
@@ -488,6 +507,12 @@ The second person will have to pull and merge before pushing.
 Do no use branches in the project!
 
 \end{frame}
+
+
+\begin{frame}[plain]
+\centering \includegraphics[width=.8\textwidth]{figs/pycharm-branches.png}
+\end{frame}
+
 
 \subsection{Tags}
 \begin{frame}{Using Git}{Tags}
