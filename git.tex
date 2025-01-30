@@ -120,9 +120,7 @@
 \end{frame}
 
 
-
-
-\begin{frame}{Version control}
+\begin{frame}{Version control}{Introduction}
 
 \begin{block}{Version control systems}
 Version control systems (VCS) keep track of changes to source code.
@@ -194,10 +192,27 @@ It is typically used as central repository:
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Git vs. SVN}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Motivation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{Git vs. SVN}{Motivation}
+
+\begin{center}
+\begin{columns}
+	\column{.450\linewidth}
+    \includegraphics[width=\linewidth]{figs/pycharm.png}
+\end{columns}
+\end{center}
+
+\end{frame}
+
+
+\subsection{Git vs. SVN}
+
+
 \begin{frame}{Git}{Git vs. SVN (I)}
 \begin{center}
 \begin{columns}
@@ -576,7 +591,8 @@ Best practices
   \item Don't push half-baked changes 
   \item Don't pull if you're in the middle of a task
   \item Never commit temporal/intermediate files
-  \item The master must be a clean and functional version of the project
+  \item Keep commit descriptions short and informative
+  \item \textit{The master must be a clean and functional version of the project}
 \end{itemize}
 
 Remember: Git never overwrites local changes without an explicit order
@@ -598,14 +614,11 @@ Remember: Git never overwrites local changes without an explicit order
 		\begin{itemize}
 			\item Free public repositories
 		\end{itemize}
-		User interface to Git
-		\begin{itemize}
-			\item Repository browser
-		\end{itemize}
-		Added value Git operations
+		Added value features
 		\begin{itemize}
 			\item Social network
 			\item Collaborative tools
+			\item Repository browser
 			\item Pull requests	
 			\item Issue tracking
 			\item Web hosting
