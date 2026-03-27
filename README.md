@@ -1,14 +1,12 @@
 
 
-# Git and Github overview 
+# Git and Github overview
 
-Slides for an introduction to Git and Github
+Slides for an introduction to Git and GitHub.
 
-It compiles with xelatex (UAH fonts must be installed).
+The deck now uses standard Beamer and does not depend on the custom UAH theme or UAH fonts.
 
-UAH fonts:
-
-https://portal.uah.es/portal/page/portal/servicio_comunicacion/PG_IMAGEN_TIPOGRAFIAS
+It is intended to compile with a regular LaTeX installation, for example with `pdflatex`.
 
 ## Acknowledgements
 
